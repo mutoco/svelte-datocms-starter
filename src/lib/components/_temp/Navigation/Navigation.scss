@@ -1,0 +1,25 @@
+@use '$scss/mixins' as *;
+@use '$scss/variables' as *;
+
+.Navigation {
+	ul {
+		display: flex;
+		justify-content: space-between;
+		max-width: 100%;
+		padding: 0 0 50px;
+		list-style: none;
+
+		ul {
+			display: block;
+			padding-inline-start: 30px;
+		}
+
+		li {
+			flex: 1;
+		}
+	}
+
+	a.active {
+		color: black;
+	}
+}

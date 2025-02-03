@@ -1,0 +1,20 @@
+@use 'sass:math';
+
+/* REM base unit multiplier. Set to 10px to make units easier to read */
+$rem-base: 10px;
+
+$desktop-width-ref: 1440px;
+$mobile-width-ref: 375px;
+
+$layout-max-width: 1440;
+
+$layout-grid-cols-desktop: 12;
+$layout-grid-gutter-desktop: 16;
+$layout-grid-margin-desktop: 40;
+
+$layout-grid-cols-mobile: 12;
+$layout-grid-gutter-mobile: 8;
+$layout-grid-margin-mobile: 16;
+
+// $font-family-serif: 'GT Alpina', serif;
+// $font-family-sans-serif: 'Helvetica Neue LT Pro', sans-serif;

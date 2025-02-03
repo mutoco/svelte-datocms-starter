@@ -1,0 +1,19 @@
+@use '$scss/mixins' as *;
+@use '$scss/variables' as *;
+
+.Breadcrumb {
+	ul {
+		display: flex;
+		list-style: none;
+		padding-inline-start: 0;
+
+		li {
+			&:not(:last-child) {
+				&::after {
+					content: '/';
+					margin: 0 5px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,201 @@
+@use '../variables/base' as *;
+@use '../mixins/units' as *;
+
+@font-face {
+	font-family: 'Helvetica Neue LT Pro';
+	src: url('$lib/assets/fonts/HelveticaNeueLTPro-Roman.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue LT Pro';
+	src: url('$lib/assets/fonts/HelveticaNeueLTPro-Md.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'GT Alpina';
+	src: url('$lib/assets/fonts/GT-Alpina-Standard-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'GT Alpina';
+	src: url('$lib/assets/fonts/GT-Alpina-Standard-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@mixin textantialiasing() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin ellipsis($lines: 1) {
+	@if $lines == 1 {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow-wrap: normal;
+	} @else {
+		display: -webkit-box;
+		-webkit-line-clamp: $lines;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		overflow-wrap: normal;
+	}
+}
+
+@mixin font-headline {
+	text-wrap: balance;
+	line-height: 150%;
+	letter-spacing: 0.03em;
+	//hyphens: auto; /* evaluate */
+}
+
+@mixin font-body {
+	//text-wrap: pretty; /* use with caution due to performance hit */
+	line-height: 150%;
+	letter-spacing: 0.03em;
+}
+
+@mixin font-styles-mixed {
+	&:global(:has(span)) {
+		font-family: $font-family-sans-serif;
+		text-transform: uppercase;
+		font-weight: 500;
+
+		:global(span) {
+			font-family: $font-family-serif;
+			font-weight: 400;
+		}
+	}
+}
+
+@mixin font-headline-1($serif: false) {
+	@include font-headline;
+	@if $serif {
+		font-family: $font-family-serif;
+		font-weight: 400;
+	} @else {
+		font-family: $font-family-sans-serif;
+		font-weight: 500;
+	}
+	font-weight: 500;
+	font-size: clamp-calc(32, 65);
+	text-transform: uppercase;
+}
+
+@mixin font-headline-2($serif: false) {
+	@include font-headline;
+	@if $serif {
+		font-family: $font-family-serif;
+		font-weight: 400;
+	} @else {
+		font-family: $font-family-sans-serif;
+		font-weight: 500;
+	}
+	font-size: rem(24);
+	text-transform: uppercase;
+}
+
+@mixin font-headline-3($serif: false) {
+	@include font-headline;
+	@if $serif {
+		font-family: $font-family-serif;
+		font-weight: 400;
+	} @else {
+		font-family: $font-family-sans-serif;
+		font-weight: 500;
+	}
+	font-size: clamp-calc(32, 48);
+	text-transform: uppercase;
+}
+
+@mixin font-headline-4 {
+	@include font-headline;
+	font-family: $font-family-sans-serif;
+	font-weight: 500;
+	font-size: clamp-calc(32, 48);
+}
+
+@mixin font-headline-5 {
+	@include font-headline;
+	font-family: $font-family-sans-serif;
+	font-weight: 400;
+	font-size: clamp-calc(24, 32);
+}
+
+@mixin font-headline-6($serif: false, $weight: 400, $transform: none) {
+	@include font-headline;
+	@if $serif {
+		font-family: $font-family-serif;
+	} @else {
+		font-family: $font-family-sans-serif;
+	}
+	font-weight: $weight;
+	@if $transform {
+		text-transform: $transform;
+	}
+	font-size: clamp-calc(14, 16);
+}
+
+@mixin font-body-1 {
+	@include font-body;
+	font-family: $font-family-sans-serif;
+	font-weight: 400;
+	font-size: clamp-calc(20, 24);
+}
+
+@mixin font-body-2 {
+	@include font-body;
+	font-family: $font-family-sans-serif;
+	font-weight: 400;
+	font-size: clamp-calc(16, 20);
+}
+
+@mixin font-nav($weight: 400) {
+	@include font-body;
+	font-family: $font-family-sans-serif;
+	font-size: rem(16);
+	font-weight: $weight;
+	text-transform: uppercase;
+}
+
+@mixin font-caption {
+	@include font-body;
+	font-family: $font-family-serif;
+	font-weight: 400;
+	font-size: rem(12);
+	font-style: italic;
+}
+
+@mixin font-label {
+	@include font-body;
+	font-family: $font-family-sans-serif;
+	font-weight: 400;
+	font-size: rem(12);
+}
+
+@mixin font-button-sm {
+	@include font-body;
+	font-family: $font-family-sans-serif;
+	font-weight: 500;
+	font-size: rem(12);
+	text-transform: uppercase;
+}
+
+@mixin font-button-md {
+	@include font-body;
+	font-family: $font-family-sans-serif;
+	font-weight: 500;
+	font-size: rem(16);
+	text-transform: uppercase;
+}

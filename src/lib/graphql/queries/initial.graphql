@@ -1,0 +1,338 @@
+query InitialQuery {
+  pageHome: homePage {
+    __typename
+    id
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pageTopics: topicsPage {
+    __typename
+    id
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pageTopicItems: allTopicItems {
+    __typename
+    id
+    parentPid
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pageRegions: regionsPage {
+    __typename
+    id
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pageRegionItems: allRegionItems {
+    __typename
+    id
+    parentPid
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pageProjectItems: allProjectItems(first: 100) {
+    __typename
+    id
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pageProjectUpdateItems: allProjectUpdateItems(first: 100) {
+    __typename
+    id
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pageAbout: aboutPage {
+    __typename
+    id
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pageAboutItems: allAboutItems {
+    __typename
+    id
+    parentPid
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pageAnnualreportItems: allAnnualreportItems {
+    __typename
+    id
+    parentPid
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pageEmployeeItems: allEmployeeItems(first: 500) {
+    __typename
+    id
+    parentPid
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    title: name
+  }
+  pageNews: newsPage {
+    __typename
+    id
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pageNewsItems: allNewsItems(first: 100) {
+    __typename
+    id
+    parentPid
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pageEvents: eventsPage {
+    __typename
+    id
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pageEventItems: allEventItems(first: 100) {
+    __typename
+    id
+    parentPid
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pagePublications: publicationsPage {
+    __typename
+    id
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pagePublicationItems: allPublicationItems(first: 100) {
+    __typename
+    id
+    parentPid
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  pageMetaItems: allMetaItems {
+    __typename
+    id
+    _allSlugLocales {
+      locale
+      slug: value
+    }
+    _allNavigationTitleLocales {
+      locale
+      title: value
+    }
+  }
+  tagsUnit: allUnitTags {
+    id
+    _allTitleLocales {
+      locale
+      value
+    }
+    _allTextLocales {
+      locale
+      value
+    }
+  }
+  tagsTeam: allTeamTags {
+    id
+    _allTeamLocales {
+      locale
+      value
+    }
+    _allDescriptionLocales {
+      locale
+      value
+    }
+    unit {
+      id
+      _allTitleLocales {
+        locale
+        value
+      }
+      _allTextLocales {
+        locale
+        value
+      }
+    }
+  }
+  tagsPublication: allPublicationTags {
+    id
+    _allTitleLocales {
+      locale
+      value
+    }
+    slug
+  }
+  tagsSolutionscape: allSolutionscapeTags {
+    id
+    _allTitleLocales {
+      locale
+      value
+    }
+    slug
+    linkUrl
+  }
+  tagsStatus: allStatusTags {
+    id
+    _allTitleLocales {
+      locale
+      value
+    }
+    slug
+  }
+  featTooltips: allTooltips(first: 100) {
+    id
+    _allWordLocales {
+      locale
+      value
+    }
+    _allTextLocales {
+      locale
+      value
+    }
+    slug
+  }
+  featUiTexts: allUiTexts(first: 100) {
+    id
+    _allTextLocales {
+      locale
+      value
+    }
+    slug
+  }
+  featFooter: footer {
+    _allTitleLocales {
+      locale
+      value
+    }
+    featuredLinks {
+      id
+    }
+    _allSubscriptionTextLocales {
+      locale
+      value
+    }
+    metaLinks {
+      ... on AboutItemRecord {
+        id
+      }
+      ... on MetaItemRecord {
+        id
+      }
+    }
+    socialLinks {
+      id
+      label
+      url
+    }
+  }
+  featCookie: cookie {
+    id
+    _allTitleLocales {
+      locale
+      value
+    }
+    _allTextLocales {
+      locale
+      value
+    }
+  }
+}

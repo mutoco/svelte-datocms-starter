@@ -1,0 +1,37 @@
+@use 'sass:math';
+@use 'node_modules/modern-normalize/modern-normalize.css';
+@use 'mixins' as *;
+@use 'variables' as *;
+@use 'richtext' as *;
+
+html {
+	-ms-content-zooming: none; /* Disables zooming */
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	font-size: #{math.div(strip-units($rem-base), 16) * 100%};
+}
+
+body {
+	overflow-wrap: break-word;
+	@include font-body-2;
+}
+
+body,
+input,
+select,
+button,
+textarea {
+	@include textantialiasing;
+}
+
+a {
+	text-decoration: none;
+}
+
+.visuallyhidden {
+	@include visually-hidden;
+}
+
+// only for storybook autodocs preview
+.sbdocs.sbdocs-content {
+	max-width: rem($layout-max-width + ($layout-grid-margin-desktop * 2));
+}

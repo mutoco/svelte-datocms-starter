@@ -1,0 +1,29 @@
+@use '$scss/mixins' as *;
+@use '$scss/variables' as *;
+
+.Footer {
+	padding: 50px 0 0;
+
+	ul {
+		max-width: 100%;
+		list-style: none;
+		padding: 0;
+
+		ul {
+			display: block;
+			padding-inline-start: 0;
+		}
+
+		li {
+			flex: 1;
+		}
+	}
+
+	// a.active {
+	// 	color: black;
+	// }
+
+	.disabled {
+		opacity: 0.5;
+	}
+}
