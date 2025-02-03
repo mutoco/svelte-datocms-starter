@@ -1,22 +1,19 @@
-# sv
+# Svelte x DatoCMS Starter
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Everything you need to build a Svelte project with DatoCMS
 
-## Creating a project
+## Use Template
 
-If you're seeing this, you've probably already done this step. Congrats!
+Choose `Use this template` and `Create new repository` directly on GitHub. Then clone repository and install dependencies:
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+# install dependencies
+npm install
 ```
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start a development server:
 
 ```bash
 npm run dev
@@ -25,7 +22,14 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+## Prepare DatoCMS
+
+*TODO: DatoCMS manual*
+
+
+## SSR vs SSG
+
+*TODO: SSR vs SSG manual*
 
 To create a production version of your app:
 
