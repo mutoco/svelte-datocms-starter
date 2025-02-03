@@ -1,6 +1,14 @@
 # Svelte x DatoCMS Starter
 
-Everything you need to build a Svelte project with DatoCMS
+Everything you need to build a Svelte project with DatoCMS:
+
+- Svelte 5 (SvelteKit)
+- Storybook
+- Svelte Intl Precompile
+- DatoCMS CDA Client & Components
+- TypeScript
+- SCSS / SASS
+- GraphQL
 
 ## Use Template
 
