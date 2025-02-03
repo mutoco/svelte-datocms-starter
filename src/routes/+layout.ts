@@ -32,5 +32,3 @@ export const load = () => {
         return { routes, tags, features };
     });
 };
-
-export const prerender = true;

@@ -1,22 +1,7 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-cloudflare';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import preprocess from 'svelte-preprocess';
 import { resolve } from 'path';
-import { executeQueryWithAutoPagination } from '@datocms/cda-client';
-import { generatePaths, query } from './src/lib/helpers/generatePaths.js';
-import 'dotenv/config';
-
-const getPaths = async () => {
-	try {
-		return generatePaths(
-			await executeQueryWithAutoPagination(query, {
-				token: process.env.PUBLIC_GRAPHQL_API_TOKEN,
-			})
-		);
-	} catch (error) {
-		console.error(error);
-	}
-};
 
 const scssAliases = (aliases) => {
 	return (url) => {
@@ -48,16 +33,7 @@ export default {
 	],
 
 	kit: {
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: '200.html',
-			precompress: false,
-			strict: true
-		}),
-		prerender: {
-			entries: await getPaths()
-		},
+		adapter: adapter(),
 		alias: {
 			'$lib': '/src/lib',
 			'$components': '/src/lib/components',
