@@ -15,7 +15,6 @@ Everything you need to build a Svelte project with DatoCMS:
 Choose `Use this template` and `Create new repository` directly on GitHub. Then clone repository and install dependencies:
 
 ```bash
-# install dependencies
 npm install
 ```
 
@@ -28,6 +27,11 @@ npm run dev
 
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
+```
+Generate Types from GraphQL Schema:
+
+```bash
+npm run generate-ts
 ```
 
 ## Prepare DatoCMS
